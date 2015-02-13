@@ -15,8 +15,8 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="default.html">
-      <m2:VisualElements DisplayName="Octopus.Windows" Description="Octopus.Windows" ForegroundText="light" BackgroundColor="#464646" Square150x150Logo="images\Logo.png" Square30x30Logo="images\SmallLogo.png">
-        <m2:SplashScreen Image="images\splashscreen.png" />
+      <m2:VisualElements DisplayName="Octopus.Windows" Description="Octopus.Windows" ForegroundText="light" BackgroundColor="#ffffff" Square150x150Logo="images\Logo.png" Square30x30Logo="images\SmallLogo.png">
+        <m2:SplashScreen Image="images\splashscreen.png" BackgroundColor="#ffffff" />
       </m2:VisualElements>
     </Application>
   </Applications>

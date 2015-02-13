@@ -8,7 +8,7 @@
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>545a19da-f747-413f-80ca-cfbe5f8220ee</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\carodriguez\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\bld\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>D918877ADF2039439C03E6CF16116AF38944A8FFE7967D68BF89A48241CA0033</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>7A5B45CCE227A385A17D06F1788AA86C649897E8DB4CF580A06338DFD399CEB2</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>545a19da-f747-413f-80ca-cfbe5f8220ee_1.0.0.0_neutral__4383yd80yb47t</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>545a19da-f747-413f-80ca-cfbe5f8220ee_4383yd80yb47t!App</RegisteredUserModeAppID>
     <RegisteredPackageID>545a19da-f747-413f-80ca-cfbe5f8220ee</RegisteredPackageID>
@@ -20,7 +20,7 @@
     <AppXManifest Include="C:\Users\carodriguez\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-02-13T18:31:34.041</Modified>
+      <Modified>2015-02-13T18:49:47.835</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -31,22 +31,22 @@
     <AppxPackagedFile Include="C:\Users\carodriguez\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\images\logo.png">
       <PackagePath>images\logo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-11-07T21:55:00.000</Modified>
+      <Modified>2015-02-09T16:58:16.448</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\carodriguez\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\images\smalllogo.png">
       <PackagePath>images\smalllogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-11-07T21:55:00.000</Modified>
+      <Modified>2015-02-09T16:57:54.118</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\carodriguez\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\images\splashscreen.png">
       <PackagePath>images\splashscreen.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-11-07T21:55:00.000</Modified>
+      <Modified>2015-02-09T16:57:32.097</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\carodriguez\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\images\storelogo.png">
       <PackagePath>images\storelogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2014-11-07T21:55:00.000</Modified>
+      <Modified>2015-02-09T16:55:58.331</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\carodriguez\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\img\logo.png">
       <PackagePath>img\logo.png</PackagePath>
@@ -70,7 +70,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\carodriguez\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-02-13T18:31:33.530</Modified>
+      <Modified>2015-02-13T18:49:47.689</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
