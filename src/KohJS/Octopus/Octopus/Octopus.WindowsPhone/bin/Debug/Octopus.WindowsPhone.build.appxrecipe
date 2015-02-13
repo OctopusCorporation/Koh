@@ -58,11 +58,11 @@
     <AppxPackagedFile Include="C:\Users\carodriguez\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.WindowsPhone\css\ui-themed.theme-light.css">
       <PackagePath>css\ui-themed.theme-light.css</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\carodriguez\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\js\CoreLibs\octopusEngine.js">
-      <PackagePath>js\CoreLibs\octopusEngine.js</PackagePath>
+    <AppxPackagedFile Include="C:\Users\carodriguez\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Core\libs\octopusEngine.js">
+      <PackagePath>Core\libs\octopusEngine.js</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\carodriguez\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\js\CoreLibs\socket.io.js">
-      <PackagePath>js\CoreLibs\socket.io.js</PackagePath>
+    <AppxPackagedFile Include="C:\Users\carodriguez\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Core\libs\socket.io.js">
+      <PackagePath>Core\libs\socket.io.js</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\carodriguez\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\js\default.js">
       <PackagePath>js\default.js</PackagePath>

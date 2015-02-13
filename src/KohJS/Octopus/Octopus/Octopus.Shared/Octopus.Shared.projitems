@@ -6,9 +6,12 @@
     <SharedGUID>b7c6a4b3-c1ef-46d3-b611-46070523253a</SharedGUID>
   </PropertyGroup>
   <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Core\libs\octopusEngine.js" />
+    <Content Include="$(MSBuildThisFileDirectory)Core\libs\socket.io.js" />
     <Content Include="$(MSBuildThisFileDirectory)img\logo.png" />
-    <Content Include="$(MSBuildThisFileDirectory)js\CoreLibs\octopusEngine.js" />
-    <Content Include="$(MSBuildThisFileDirectory)js\CoreLibs\socket.io.js" />
     <Content Include="$(MSBuildThisFileDirectory)js\default.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="$(MSBuildThisFileDirectory)Components\" />
   </ItemGroup>
 </Project>

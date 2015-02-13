@@ -20,13 +20,13 @@
     <AppXManifest Include="C:\Users\carodriguez\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-02-13T18:49:47.835</Modified>
+      <Modified>2015-02-13T20:07:16.153</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\carodriguez\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\default.html">
       <PackagePath>default.html</PackagePath>
-      <Modified>2015-02-13T18:37:59.996</Modified>
+      <Modified>2015-02-13T20:06:59.209</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\carodriguez\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\images\logo.png">
       <PackagePath>images\logo.png</PackagePath>
@@ -56,21 +56,21 @@
       <PackagePath>css\default.css</PackagePath>
       <Modified>2014-11-07T21:55:00.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\carodriguez\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\js\CoreLibs\octopusEngine.js">
-      <PackagePath>js\CoreLibs\octopusEngine.js</PackagePath>
+    <AppxPackagedFile Include="C:\Users\carodriguez\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Core\libs\octopusEngine.js">
+      <PackagePath>Core\libs\octopusEngine.js</PackagePath>
       <Modified>2015-02-13T18:37:12.176</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\carodriguez\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\js\CoreLibs\socket.io.js">
-      <PackagePath>js\CoreLibs\socket.io.js</PackagePath>
+    <AppxPackagedFile Include="C:\Users\carodriguez\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Core\libs\socket.io.js">
+      <PackagePath>Core\libs\socket.io.js</PackagePath>
       <Modified>2015-02-09T01:51:09.907</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\carodriguez\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\js\default.js">
       <PackagePath>js\default.js</PackagePath>
-      <Modified>2015-02-11T15:29:24.190</Modified>
+      <Modified>2015-02-13T20:06:59.219</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\carodriguez\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-02-13T18:49:47.689</Modified>
+      <Modified>2015-02-13T20:07:16.088</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

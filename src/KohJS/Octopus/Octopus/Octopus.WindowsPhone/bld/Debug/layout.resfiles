@@ -1,6 +1,6 @@
+Core\libs\octopusEngine.js
+Core\libs\socket.io.js
 img\logo.png
-js\CoreLibs\octopusEngine.js
-js\CoreLibs\socket.io.js
 js\default.js
 css\default.css
 css\ui-themed.css
