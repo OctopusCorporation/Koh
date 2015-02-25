@@ -8,7 +8,7 @@
         WinJS.Utilities.setInnerHTMLUnsafe(document.querySelector("body"), '<shadow-root></shadow-root>');
 
         var xhr = [];
-        for (i = 0; i < 3; i++) {
+        for (i = 0; i < elements.length; i++) {
             (function (i) {
                 xhr[i] = new XMLHttpRequest();
                 url = elements[i].href;;
@@ -17,7 +17,8 @@
                     if (xhr[i].readyState == 4 && xhr[i].status == 200) {
                         shadowDom = document.getElementsByTagName("shadow-root")[0].innerHTML;
 
-                        document.getElementsByTagName("shadow-root")[0].innerHTML = shadowDom + xhr[i].responseText;
+                        //WinJS.Utilities.setInnerHTMLUnsafe(document.querySelector("shadow-root"), shadowDom + xhr[i].responseText);
+                        document.getElementsByTagName("shadow-root")[0].innerHTML = window.toStaticHTML(shadowDom + xhr[i].responseText);
                     }
                 };
                 xhr[i].send();

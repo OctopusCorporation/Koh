@@ -92,7 +92,7 @@ $(function(){
             borderWidth: 1,
             color: '#d9dee9'
         },
-        colors: ["#19b39b", "#644688"],
+        colors: ["#c33c34", "#73231f"],
         xaxis:{
         },
         yaxis: {
@@ -459,7 +459,7 @@ $(function(){
 
       }
     },
-    colors: ["#65b5c2","#4da7c1","#3993bb","#2e7bad","#23649e"],
+    colors: ["#c33c34","#d55c54","#e66c65","#f77d76","#f88e87"],
     grid: {
         hoverable: true,
         clickable: false
