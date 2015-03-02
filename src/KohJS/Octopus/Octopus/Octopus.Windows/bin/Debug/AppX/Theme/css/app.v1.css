@@ -1380,7 +1380,7 @@ a.bg-info:hover {
 }
 
 .bg-warning {
-  background-color: #fcf8e3;
+  background-color: #d55c54;
 }
 
 a.bg-warning:hover {
@@ -11155,12 +11155,12 @@ a.list-group-item:hover,a.list-group-item:focus {
 
 .list-group-item.active {
   color: #fff;
-  border-color: #1ccacc !important;
-  background-color: #1ccacc !important;
+  border-color: #c33c34 !important;
+  background-color: #c33c34 !important;
 }
 
 .list-group-item.active .text-muted {
-  color: #91eff0;
+  color: #ffb8b4;
 }
 
 .list-group-item.active a {
@@ -12437,14 +12437,14 @@ body.container {
 
 .btn-info {
   color: #fff !important;
-  background-color: #1ccacc;
-  border-color: #1ccacc;
+  background-color: #c33c34;
+  border-color: #c33c34;
 }
 
 .btn-info:hover,.btn-info:focus,.btn-info:active,.btn-info.active,.open .dropdown-toggle.btn-info {
   color: #fff !important;
-  background-color: #19b4b6;
-  border-color: #17a6a8;
+  background-color: #c94e47;
+  border-color: #c94e47;
 }
 
 .btn-info:active,.btn-info.active,.open .dropdown-toggle.btn-info {
@@ -12867,7 +12867,7 @@ body.container {
   top: 0;
   left: 39px;
   bottom: 0;
-  border-left: 1px solid #1ccacc;
+  border-left: 1px solid #c33c34;
 }
 
 .paper textarea {
@@ -13585,12 +13585,12 @@ body.container {
 }
 
 .bg-info {
-  background-color: #1ccacc;
-  color: #bef5f6;
+  background-color: #d55c54;
+  color: #ffb8b4;
 }
 
 .bg-info.lt,.bg-info .lt {
-  background-color: #24dbdd;
+  background-color: #c33c34;
 }
 
 .bg-info.lter,.bg-info .lter {
@@ -13665,20 +13665,20 @@ body.container {
 }
 
 .bg-info .icon-muted {
-  color: #91eff0 !important;
+  color: #ffffff !important;
 }
 
 .bg-info.auto .list-group-item,.bg-info .auto .list-group-item {
-  border-color: #1ed7d9 !important;
+  border-color: #c33c34 !important;
   background-color: transparent;
 }
 
 .bg-info.auto .list-group-item:hover,.bg-info.auto .list-group-item:focus,.bg-info.auto .list-group-item:active,.bg-info.auto .list-group-item.active,.bg-info .auto .list-group-item:hover,.bg-info .auto .list-group-item:focus,.bg-info .auto .list-group-item:active,.bg-info .auto .list-group-item.active {
-  background-color: #16b6b8 !important;
+  background-color: #e66c65 !important;
 }
 
 .bg-warning {
-  background-color: #fcc633;
+  background-color: #d55c54;
   color: #fffefc;
 }
 
@@ -13889,7 +13889,7 @@ body.container {
 }
 
 .text-primary {
-  color: #177bbb;
+  color: #c33c34;
 }
 
 .text-primary-lt {
@@ -14678,7 +14678,7 @@ body.container {
 }
 
 .avatar i.on {
-  background-color: #1aae88;
+  background-color: #c33c34;
 }
 
 .avatar i.off {
