@@ -1,0 +1,18 @@
+﻿// For details on localizing a Windows app, see: http://go.microsoft.com/fwlink/?LinkId=212836
+
+{
+    "TestUser": {
+        "_Id": "0",
+        "UserName": "Cami Rodriguez",
+        "Password": "CAMILO",
+        "StoreAvailable": true,
+        "CreditStatusAvalaible": true
+    },
+    "User": {
+        "_Id": null,
+        "UserName": null,
+        "Password": null,
+        "StoreAvailable": false,
+        "CreditStatusAvalaible": false
+    }
+}
