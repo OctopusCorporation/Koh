@@ -1,0 +1,8 @@
+﻿// For details on localizing a Windows app, see: http://go.microsoft.com/fwlink/?LinkId=212836
+
+{
+    "isFirstTime": false,
+    "showTutorial": false,
+    "downloadExampleAssets": false,
+    "loginObligatory": false
+}
