@@ -10,7 +10,7 @@ var Octopus = WinJS.Class.define(function (octo) {
     this.connected = false;
     this.disconnected = true;
     this.socket = null;
-    this.scripts = ['Core/libs/WebComponents.js'];
+    this.scripts = ['Core/libs/WebComponents.js', 'Core/libs/socket.io.js'];
 },
 {
     engine: function () {
@@ -32,6 +32,8 @@ var Octopus = WinJS.Class.define(function (octo) {
         this.socket.emit('command.KohJS.Hy', { Command: command, Values: data });
     },
     require: function () {
+        // Insert the core scripts 
+        //
         //http://www.html5rocks.com/en/tutorials/speed/script-loading/
         var src;
         var script;

@@ -11,17 +11,17 @@
 
     <!-- Octopus references -->
     <script src="Core/libs/octopusEngine.js"></script>
-    <script src="Core/libs/socket.io.js"></script>
+    <!--<script src="Core/libs/socket.io.js"></script>-->
 
     <!-- Octopus.Windows references -->
     <link href="/css/default.css" rel="stylesheet" />
     <script src="/js/default.js"></script>
 
     <!-- HTML Imports-->
-    <link rel="import" href="Components/head.html">
-    <link rel="import" href="Components/Message-Received.html">
-    <link rel="import" href="Components/Temperature-Viewer.html">
-    <link rel="import" href="Components/Led-Control.html">
+    <link rel="import" href="/Core/Components/Examples/head.html" data-target="#head">
+    <link rel="import" href="/Core/Components/Examples/Message-Received.html" data-target="#message">
+    <link rel="import" href="/Core/Components/Examples/Temperature-Viewer.html" data-target="#temperature">
+    <link rel="import" href="/Core/Components/Examples/Led-Control.html" data-target="#led">
 
     <style>
         .container{
@@ -33,7 +33,10 @@
     </style>
 </head>
 <body>
-    
+    <section id="head" class="container"></section>
+    <section id="message" class="container"></section>
+    <section id="temperature" class="container"></section>
+    <section id="led" class="container"></section>
     <script>
 
         WinJS.Application.addEventListener("Stardust.Say", function (data) {

@@ -1,10 +1,11 @@
-Components\head.html
-Components\Led-Control.html
-Components\Message-Received.html
-Components\Temperature-Viewer.html
+Core\Components\Examples\head.html
+Core\Components\Examples\Led-Control.html
+Core\Components\Examples\Message-Received.html
+Core\Components\Examples\Temperature-Viewer.html
 Core\libs\octopusEngine.js
 Core\libs\socket.io.js
 Core\libs\WebComponents.js
+Examples\default.html
 img\logo.png
 js\default.js
 Theme\404.html

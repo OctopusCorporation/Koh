@@ -1,0 +1,13 @@
+﻿<label>Led</label>
+<div id="toggleSwitch"></div>
+
+<script>
+    (function () {
+        "use strict";
+
+        var element = document.getElementById("toggleSwitch");
+        var toggle = new WinJS.UI.ToggleSwitch(element, { checked: true, onchange: ledChanged });
+
+    })();
+
+</script>
