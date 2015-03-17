@@ -502,8 +502,11 @@
                     return e.className = "i", !e.getAttribute("className")
                 }), r.getElementsByTagName = ut(function(e) {
                     return e.appendChild(n.createComment("")), !e.getElementsByTagName("*").length
-                }), r.getElementsByClassName = ut(function(e) {
-                    return e.innerHTML = "<div class='a'></div><div class='a i'></div>", e.firstChild.className = "i", 2 === e.getElementsByClassName("i").length
+                }), r.getElementsByClassName = ut(function (e) {
+                    MSApp.execUnsafeLocalFunction(function () {
+                        return e.innerHTML = "<div class='a'></div><div class='a i'></div>", e.firstChild.className = "i", 2 === e.getElementsByClassName("i").length
+                    });
+                    
                 }), r.getById = ut(function(e) {
                     return d.appendChild(e).id = b, !n.getElementsByName || !n.getElementsByName(b).length
                 }), r.getById ? (o.find.ID = function(e, t) {
@@ -535,8 +538,11 @@
                     return o
                 }, o.find.CLASS = r.getElementsByClassName && function(e, n) {
                     return typeof n.getElementsByClassName !== j && h ? n.getElementsByClassName(e) : t
-                }, m = [], g = [], (r.qsa = K.test(n.querySelectorAll)) && (ut(function(e) {
-                    e.innerHTML = "<select><option selected=''></option></select>", e.querySelectorAll("[selected]").length || g.push("\\[" + P + "*(?:value|" + B + ")"), e.querySelectorAll(":checked").length || g.push(":checked")
+                }, m = [], g = [], (r.qsa = K.test(n.querySelectorAll)) && (ut(function (e) {
+                    MSApp.execUnsafeLocalFunction(function () {
+                        e.innerHTML = "<select><option selected=''></option></select>", e.querySelectorAll("[selected]").length || g.push("\\[" + P + "*(?:value|" + B + ")"), e.querySelectorAll(":checked").length || g.push(":checked")
+                    });
+                    
                 }), ut(function(e) {
                     var t = n.createElement("input");
                     t.setAttribute("type", "hidden"), e.appendChild(t).setAttribute("t", ""), e.querySelectorAll("[t^='']").length && g.push("[*^$]=" + P + "*(?:''|\"\")"), e.querySelectorAll(":enabled").length || g.push(":enabled", ":disabled"), e.querySelectorAll("*,:x"), g.push(",.*:")
@@ -1033,12 +1039,18 @@
             }
             r.sortStable = b.split("").sort(A).join("") === b, r.detectDuplicates = S, p(), r.sortDetached = ut(function(e) {
                 return 1 & e.compareDocumentPosition(f.createElement("div"))
-            }), ut(function(e) {
-                return e.innerHTML = "<a href='#'></a>", "#" === e.firstChild.getAttribute("href")
+            }), ut(function (e) {
+                MSApp.execUnsafeLocalFunction(function () {
+                    return e.innerHTML = "<a href='#'></a>", "#" === e.firstChild.getAttribute("href")
+                });
+                
             }) || ct("type|href|height|width", function(e, n, r) {
                 return r ? t : e.getAttribute(n, "type" === n.toLowerCase() ? 1 : 2)
-            }), r.attributes && ut(function(e) {
-                return e.innerHTML = "<input/>", e.firstChild.setAttribute("value", ""), "" === e.firstChild.getAttribute("value")
+            }), r.attributes && ut(function (e) {
+                MSApp.execUnsafeLocalFunction(function () {
+                    return e.innerHTML = "<input/>", e.firstChild.setAttribute("value", ""), "" === e.firstChild.getAttribute("value")
+                });
+                
             }) || ct("value", function(e, n, r) {
                 return r || "input" !== e.nodeName.toLowerCase() ? t : e.defaultValue
             }), ut(function(e) {
@@ -1177,7 +1189,7 @@
         }
     }), x.support = function(t) {
         var n, r, o, s, l, u, c, p, f, d = a.createElement("div");
-        if (d.setAttribute("className", "t"), d.innerHTML = "  <link/><table></table><a href='/a'>a</a><input type='checkbox'/>", n = d.getElementsByTagName("*") || [], r = d.getElementsByTagName("a")[0], !r || !r.style || !n.length) return t;
+        if (d.setAttribute("className", "t"), d.innerHTML = window.toStaticHTML("  <link/><table></table><a href='/a'>a</a><input type='checkbox'/>"), n = d.getElementsByTagName("*") || [], r = d.getElementsByTagName("a")[0], !r || !r.style || !n.length) return t;
         s = a.createElement("select"), u = s.appendChild(a.createElement("option")), o = d.getElementsByTagName("input")[0], r.style.cssText = "top:1px;float:left;opacity:.5", t.getSetAttribute = "t" !== d.className, t.leadingWhitespace = 3 === d.firstChild.nodeType, t.tbody = !d.getElementsByTagName("tbody").length, t.htmlSerialize = !!d.getElementsByTagName("link").length, t.style = /top/.test(r.getAttribute("style")), t.hrefNormalized = "/a" === r.getAttribute("href"), t.opacity = /^0.5/.test(r.style.opacity), t.cssFloat = !!r.style.cssFloat, t.checkOn = !!o.value, t.optSelected = u.selected, t.enctype = !!a.createElement("form").enctype, t.html5Clone = "<:nav></:nav>" !== a.createElement("nav").cloneNode(!0).outerHTML, t.inlineBlockNeedsLayout = !1, t.shrinkWrapBlocks = !1, t.pixelPosition = !1, t.deleteExpando = !0, t.noCloneEvent = !0, t.reliableMarginRight = !0, t.boxSizingReliable = !0, o.checked = !0, t.noCloneChecked = o.cloneNode(!0).checked, s.disabled = !0, t.optDisabled = !u.disabled;
         try {
             delete d.test
@@ -1201,14 +1213,14 @@
             MSApp.execUnsafeLocalFunction(function() {
                 l.appendChild(n).appendChild(d)
             }),
-            d.innerHTML = "<table><tr><td></td><td>t</td></tr></table>",
+            d.innerHTML = window.toStaticHTML("<table><tr><td></td><td>t</td></tr></table>"),
             o = d.getElementsByTagName("td"),
             o[0].style.cssText = "padding:0;margin:0;border:0;display:none",
             p = 0 === o[0].offsetHeight,
             o[0].style.display = "",
             o[1].style.display = "none",
             t.reliableHiddenOffsets = p && 0 === o[0].offsetHeight,
-            d.innerHTML = "",
+            d.innerHTML = window.toStaticHTML(""),
             d.style.cssText = "box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;padding:1px;border:1px;display:block;width:4px;margin-top:1%;position:absolute;top:1%;",
             x.swap(l, null != l.style.zoom ? {
                 zoom: 1
@@ -1216,7 +1228,7 @@
                 t.boxSizing = 4 === d.offsetWidth
             }), e.getComputedStyle && (t.pixelPosition = "1%" !== (e.getComputedStyle(d, null) || {}).top, t.boxSizingReliable = "4px" === (e.getComputedStyle(d, null) || {
                 width: "4px"
-            }).width, r = d.appendChild(a.createElement("div")), r.style.cssText = d.style.cssText = s, r.style.marginRight = r.style.width = "0", d.style.width = "1px", t.reliableMarginRight = !parseFloat((e.getComputedStyle(r, null) || {}).marginRight)), typeof d.style.zoom !== i && (d.innerHTML = "", d.style.cssText = s + "width:1px;padding:1px;display:inline;zoom:1", t.inlineBlockNeedsLayout = 3 === d.offsetWidth, d.style.display = "block", d.innerHTML = "<div></div>", d.firstChild.style.width = "5px", t.shrinkWrapBlocks = 3 !== d.offsetWidth, t.inlineBlockNeedsLayout && (l.style.zoom = 1)), l.removeChild(n), n = d = o = r = null)
+            }).width, r = d.appendChild(a.createElement("div")), r.style.cssText = d.style.cssText = s, r.style.marginRight = r.style.width = "0", d.style.width = "1px", t.reliableMarginRight = !parseFloat((e.getComputedStyle(r, null) || {}).marginRight)), typeof d.style.zoom !== i && (d.innerHTML = window.toStaticHTML(""), d.style.cssText = s + "width:1px;padding:1px;display:inline;zoom:1", t.inlineBlockNeedsLayout = 3 === d.offsetWidth, d.style.display = "block", d.innerHTML = window.toStaticHTML("<div></div>"), d.firstChild.style.width = "5px", t.shrinkWrapBlocks = 3 !== d.offsetWidth, t.inlineBlockNeedsLayout && (l.style.zoom = 1)), l.removeChild(n), n = d = o = r = null)
         }), n = s = l = u = r = o = null, t
     }({});
     var B = /(?:\{[\s\S]*\}|\[[\s\S]*\])$/,
@@ -2148,14 +2160,17 @@
                 var n = this[0] || {},
                     r = 0,
                     i = this.length;
-                if (e === t) return 1 === n.nodeType ? n.innerHTML.replace(gt, "") : t;
-                if (!("string" != typeof e || Tt.test(e) || !x.support.htmlSerialize && mt.test(e) || !x.support.leadingWhitespace && yt.test(e) || At[(bt.exec(e) || ["", ""])[1].toLowerCase()])) {
-                    e = e.replace(vt, "<$1></$2>");
-                    try {
-                        for (; i > r; r++) n = this[r] || {}, 1 === n.nodeType && (x.cleanData(Ft(n, !1)), n.innerHTML = e);
-                        n = 0
-                    } catch (o) {}
-                }
+                MSApp.execUnsafeLocalFunction(function () {
+                    if (e === t) return 1 === n.nodeType ? n.innerHTML.replace(gt, "") : t;
+                    if (!("string" != typeof e || Tt.test(e) || !x.support.htmlSerialize && mt.test(e) || !x.support.leadingWhitespace && yt.test(e) || At[(bt.exec(e) || ["", ""])[1].toLowerCase()])) {
+                        e = e.replace(vt, "<$1></$2>");
+                        try {
+                            for (; i > r; r++) n = this[r] || {}, 1 === n.nodeType && (x.cleanData(Ft(n, !1)), n.innerHTML = e);
+                            n = 0
+                        } catch (o) { }
+                    }
+                });
+                
                 n && this.empty().append(e)
             }, null, e, arguments.length)
         },

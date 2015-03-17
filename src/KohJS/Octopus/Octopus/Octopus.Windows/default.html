@@ -1,78 +1,77 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en" class="app">
 <head>
     <meta charset="utf-8" />
-    <title>Octopus.Windows</title>
+    <title>Octopus</title>
+    <meta name="description" content="app, web app, responsive, admin dashboard, admin, flat, flat ui, ui kit, off screen nav" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="/Theme/css/app.v1.css" type="text/css" />
+    <link rel="stylesheet" href="/Theme/js/calendar/bootstrap_calendar.css" type="text/css" />
+    <!--[if lt IE 9]> 
+        <script src="/Theme/js/ie/html5shiv.js"></script> 
+        <script src="/Theme/js/ie/respond.min.js"></script> 
+        <script src="/Theme/js/ie/excanvas.js"></script> 
+    <![endif]-->
 
     <!-- WinJS references -->
-    <link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />
+    <!--<link href="//Microsoft.WinJS.2.0/css/ui-light.css" rel="stylesheet" />-->
+    <!--<script src="//Microsoft.WinJS.2.0/js/ui.js"></script>-->
     <script src="//Microsoft.WinJS.2.0/js/base.js"></script>
-    <script src="//Microsoft.WinJS.2.0/js/ui.js"></script>
 
     <!-- Octopus references -->
     <script src="Core/libs/octopusEngine.js"></script>
-    <!--<script src="Core/libs/socket.io.js"></script>-->
 
     <!-- Octopus.Windows references -->
-    <link href="/css/default.css" rel="stylesheet" />
+    <!--<link href="/css/default.css" rel="stylesheet" />-->
     <script src="/js/default.js"></script>
 
     <!-- HTML Imports-->
-    <link rel="import" href="/Core/Components/Examples/head.html" data-target="#head">
-    <link rel="import" href="/Core/Components/Examples/Message-Received.html" data-target="#message">
-    <link rel="import" href="/Core/Components/Examples/Temperature-Viewer.html" data-target="#temperature">
-    <link rel="import" href="/Core/Components/Examples/Led-Control.html" data-target="#led">
-
-    <style>
-        .container{
-            float:left; 
-            width:100%; 
-            margin-left: 30px; 
-            margin-top:30px;
-        }
-    </style>
+    <link rel="import" href="/Core/Components/header.html" data-target="#mainHeader_">
+    <link rel="import" href="/Core/Components/asideMenu.html" data-target="#mainMenu_">
+    
 </head>
 <body>
-    <section id="head" class="container"></section>
-    <section id="message" class="container"></section>
-    <section id="temperature" class="container"></section>
-    <section id="led" class="container"></section>
-    <script>
+    <section class="vbox">
+        <header id="mainHeader_" class="bg-white header header-md navbar navbar-fixed-top-xs box-shadow"></header>
+        <section>
+            <section class="hbox stretch">
+                <!-- .aside -->
+                <aside class="bg-black aside-md hidden-print hidden-xs" id="nav">
+                    <section class="vbox" id="mainMenu_"></section>
+                </aside>
 
-        WinJS.Application.addEventListener("Stardust.Say", function (data) {
-            var console = document.getElementById('console');
-            console.innerHTML = data.Message;
-        });
+                <section id="content">
+                    <section class="hbox stretch">
+                        <section>
+                            <section class="vbox">
+                                <section class="scrollable padder">
 
-        WinJS.Application.addEventListener("command.TemperatureChanged", function (data) {
-            if (data.Frame.Command === 'command.TemperatureChanged') {
-                var temperatureView = document.getElementById('temperature');
-                temperatureView.value = data.Frame.Values[0].temperatureCentigrades;
-            }
-        });
+                                    <!--PUT ALL CONTENT HERE-->
 
-        WinJS.Application.addEventListener("command.Message2WinJS", function (data) {
-            if (data.Frame.Command === 'command.Message2WinJS') {
-                var console = document.getElementById('console');
-                console.innerHTML = data.Frame.Values[0].Message;
-            }
-        });
+                                </section>
+                            </section>
+                        </section>
+                    </section>
+                    <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+                </section>
+                <!-- /.aside --> 
+            </section>
+        </section>
+    </section>
 
-        function ledChanged() {
-            var toggleSwitch = document.getElementById('toggleSwitch').winControl;
-            if (toggleSwitch != undefined) {
-                if (toggleSwitch.checked == true) {
-                    octo.emit('command.LedChanged', [{ isOn: true }]);
-                }
-                else {
-                    octo.emit('command.LedChanged', [{ isOn: false }]);
-                }
-            }
-
-        }
-
-        WinJS.Utilities.markSupportedForProcessing(ledChanged);
-
-    </script>
+    <!--<script src="/Theme/js/app.v1.js"></script>
+    <script src="/Theme/js/charts/easypiechart/jquery.easy-pie-chart.js"></script>
+    <script src="/Theme/js/charts/sparkline/jquery.sparkline.min.js"></script>
+    <script src="/Theme/js/charts/flot/jquery.flot.min.js"></script>
+    <script src="/Theme/js/charts/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="/Theme/js/charts/flot/jquery.flot.spline.js"></script>
+    <script src="/Theme/js/charts/flot/jquery.flot.pie.min.js"></script>
+    <script src="/Theme/js/charts/flot/jquery.flot.resize.js"></script>
+    <script src="/Theme/js/charts/flot/jquery.flot.grow.js"></script>
+    <script src="/Theme/js/charts/flot/demo.js"></script>
+    <script src="/Theme/js/calendar/bootstrap_calendar.js"></script>
+    <script src="/Theme/js/calendar/demo.js"></script>
+    <script src="/Theme/js/sortable/jquery.sortable.js"></script>
+    <script src="/Theme/js/app.plugin.js"></script>-->
 </body>
 </html>
