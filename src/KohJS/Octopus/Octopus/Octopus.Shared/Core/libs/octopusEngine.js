@@ -83,10 +83,10 @@
                 }
             }
 
-            // loop through core script urls
-            for (var key in scripts.Core) {
-                if (scripts.Core.hasOwnProperty(key)) {
-                    src = scripts.Core[key].Path;
+            // loop through script urls
+            for (var groupScripts in scripts) {
+                for (var JSscript in scripts[groupScripts]) {
+                    src = scripts[groupScripts][JSscript].Path;
 
                     if ('async' in firstScript) { // modern browsers
                         script = document.createElement('script');
@@ -109,7 +109,6 @@
                     }
                 }
             }
-
     }
     })
 
@@ -118,8 +117,6 @@
             socket.emit('command.KohJS.Hy', { Command: command, Values: data });
         }
     })
-
-    
 
     WinJS.Namespace.define("Octopus.Utils", {
         ReadConfigFile: function (callback, fileName) {
