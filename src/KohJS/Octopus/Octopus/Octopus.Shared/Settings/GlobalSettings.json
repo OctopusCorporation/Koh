@@ -3,5 +3,6 @@
 {
     "IsTestUser": true,
     "ObligatoryLogin": true,
-    "Themes": [ { "Name": "Red" } ]
+    "Themes": [ { "Name": "Red" } ],
+    "Home": "projects"
 }

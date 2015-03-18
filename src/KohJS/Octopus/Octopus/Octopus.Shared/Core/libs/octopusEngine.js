@@ -4,34 +4,47 @@
 
 //WinJS.Application.queueEvent({ type: "fullViewPossibleChanged", data: { test: 1 } });
 
-var Octopus = WinJS.Class.define(function (octo) {
-    this.octo = octo;
-    this.stardust = this.octo.Stardust;
-    this.connected = false;
-    this.disconnected = true;
-    this.socket = null;
-    this.scripts = ['Core/libs/WebComponents.js', 'Core/libs/socket.io.js'];
-},
-{
-    engine: function () {
-        this.socket = io(this.stardust);
+(function () {
+    var connected = false;
+    var disconnected = true;
+    var socket = null;
+        
+    var scripts = ['Core/libs/WebComponents.js', 'Core/libs/socket.io.js'];
 
-        this.socket.on('connect', function () {
-            WinJS.Application.queueEvent("StarDust.Connected");
-        });
+    WinJS.Namespace.define("Octopus.Core", {
+        Initialize: function () {
+            Octopus.Core.Require();
+            Octopus.Core.SettingUpApp();
+            Octopus.Core.Socket();
+        }
+    })
 
-        this.socket.on('Welcome', function (data) {
-            WinJS.Application.queueEvent({ type: "Stardust.Say", Message: data.Message });
-        });
+    WinJS.Namespace.define("Octopus", {
+        SettingUpApp: function () {
+            // do something
+        }
+    })
 
-        this.socket.on('command.KohJS', function (data) {
-            WinJS.Application.queueEvent({type: data.Command, Frame : {Command: data.Command, Values: data.Values} })
-        });
-    },
-    emit: function (command, data) {
-        this.socket.emit('command.KohJS.Hy', { Command: command, Values: data });
-    },
-    require: function () {
+    WinJS.Namespace.define("Octopus.Core", {
+        Socket: function () {
+            socket = io(this.stardust);
+
+            socket.on('connect', function () {
+                WinJS.Application.queueEvent("StarDust.Connected");
+            });
+
+            socket.on('Welcome', function (data) {
+                WinJS.Application.queueEvent({ type: "Stardust.Say", Message: data.Message });
+            });
+
+            socket.on('command.KohJS', function (data) {
+                WinJS.Application.queueEvent({type: data.Command, Frame : {Command: data.Command, Values: data.Values} })
+            });
+        }
+    })
+
+    WinJS.Namespace.define("Octopus.Core", {
+        Require: function () {
         // Insert the core scripts 
         //
         //http://www.html5rocks.com/en/tutorials/speed/script-loading/
@@ -54,7 +67,7 @@ var Octopus = WinJS.Class.define(function (octo) {
         }
 
         // loop through our script urls
-        while (src = this.scripts.shift()) {
+        while (src = scripts.shift()) {
             if ('async' in firstScript) { // modern browsers
                 script = document.createElement('script');
                 script.async = false;
@@ -76,7 +89,32 @@ var Octopus = WinJS.Class.define(function (octo) {
             }
         }
     }
-}
-);
+    })
 
-WinJS.Class.mix(Octopus);
+    WinJS.Namespace.define("Octopus", {
+        emit: function (command, data) {
+            socket.emit('command.KohJS.Hy', { Command: command, Values: data });
+        }
+    })
+
+    WinJS.Namespace.define("Octopus", {
+        ReadConfigFile: function (fileName) {
+            var xhr =  new XMLHttpRequest();
+
+            xhr.open("GET", fileName, false);
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    return xhr.responseText;
+                }
+            };
+
+            xhr.send();
+        }
+    })
+
+    //WinJS.Namespace.define("Octopus", {
+    //    nameMethod: function () {
+    //        // do something
+    //    }
+    //})
+})();

@@ -20,17 +20,17 @@
     <AppXManifest Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-03-17T16:03:24.335</Modified>
+      <Modified>2015-03-17T18:12:28.456</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\default.html">
       <PackagePath>default.html</PackagePath>
-      <Modified>2015-03-17T16:48:09.428</Modified>
+      <Modified>2015-03-17T18:13:03.021</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Core\Components\asideMenu.html">
       <PackagePath>Core\Components\asideMenu.html</PackagePath>
-      <Modified>2015-03-17T16:40:10.884</Modified>
+      <Modified>2015-03-17T23:23:32.080</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Core\Components\Examples\head.html">
       <PackagePath>Core\Components\Examples\head.html</PackagePath>
@@ -310,7 +310,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Core\libs\octopusEngine.js">
       <PackagePath>Core\libs\octopusEngine.js</PackagePath>
-      <Modified>2015-03-16T18:49:49.102</Modified>
+      <Modified>2015-03-17T23:47:08.321</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Core\libs\socket.io.js">
       <PackagePath>Core\libs\socket.io.js</PackagePath>
@@ -322,7 +322,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\js\default.js">
       <PackagePath>js\default.js</PackagePath>
-      <Modified>2015-03-16T18:56:29.210</Modified>
+      <Modified>2015-03-17T23:47:08.260</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Theme\js\app.plugin.js">
       <PackagePath>Theme\js\app.plugin.js</PackagePath>
@@ -462,7 +462,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Settings\GlobalSettings.json">
       <PackagePath>Settings\GlobalSettings.json</PackagePath>
-      <Modified>2015-03-17T03:56:24.132</Modified>
+      <Modified>2015-03-17T23:23:35.354</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Settings\HostList.json">
       <PackagePath>Settings\HostList.json</PackagePath>
@@ -562,7 +562,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-03-17T16:03:24.176</Modified>
+      <Modified>2015-03-17T18:12:28.199</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
