@@ -19,7 +19,7 @@
     <Content Include="$(MSBuildThisFileDirectory)img\logo.png" />
     <Content Include="$(MSBuildThisFileDirectory)js\default.js" />
     <Content Include="$(MSBuildThisFileDirectory)Settings\GlobalSettings.json" />
-    <Content Include="$(MSBuildThisFileDirectory)Settings\HostList.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Settings\SystemHostSettings.json" />
     <Content Include="$(MSBuildThisFileDirectory)Settings\InitialSettings.json" />
     <Content Include="$(MSBuildThisFileDirectory)Settings\Libraries.json" />
     <Content Include="$(MSBuildThisFileDirectory)Settings\Updater.json" />

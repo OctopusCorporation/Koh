@@ -9,43 +9,82 @@
     var disconnected = true;
     var socket = null;
 
+    var initialSettings = null;
+    var globalSettings = null;
+    var userSettings = null;
+    var updater = null;
+    var systemHostList = null;
+
     WinJS.Namespace.define("Octopus.Core", {
         Initialize: function () {
             Octopus.Core.SettingUpApp();
-            //Octopus.Core.Socket();
+            //
         }
     })
 
     WinJS.Namespace.define("Octopus.Core", {
         SettingUpApp: function () {
-            var initialSettings = null;
-            var globalSettings = null;
-            var userSettings = null;
-            var updater = null;
+            
 
             // Add the necesary libraries 
-            Octopus.Utils.ReadConfigFile(function (response) {
-                Octopus.Core.Require(response);
+            Octopus.Utils.ReadConfigFile(function (libraries) {
+                Octopus.Core.Require(libraries);
+
+                // Verify is test user or real user
+                Octopus.Utils.ReadConfigFile(function (initial) {
+                    initialSettings = initial;
+
+                    // Get the global settings
+                    Octopus.Utils.ReadConfigFile(function (global) {
+                        globalSettings = global;
+
+                        // Get user information
+                        Octopus.Utils.ReadConfigFile(function (user) {
+                            userSettings = user;
+
+                            Octopus.Core.InitializePrimarySocket();
+
+                        }, "/Settings/UserSettings.json");
+                    }, "/Settings/GlobalSettings.json");
+                }, "/Settings/InitialSettings.json");
+
             }, "/Settings/Libraries.json");
-            Octopus.Utils.ReadConfigFile(function (response) {
-                initialSettings = response;
-            }, "/Settings/InitialSettings.json");
-            Octopus.Utils.ReadConfigFile(function (response) {
-                globalSettings = response;
-            }, "/Settings/GlobalSettings.json");
-            Octopus.Utils.ReadConfigFile(function (response) {
-                userSettings = response;
-            }, "/Settings/UserSettings.json");
-            Octopus.Utils.ReadConfigFile(function (response) {
-                updater = response;
-            }, "/Settings/Updater.json");
+                        
+            // Check the system host and verify system updates
+            Octopus.Utils.ReadConfigFile(function (hosts) {
+                systemHostList = hosts;
+
+                Octopus.Utils.ReadConfigFile(function (response) {
+                    updater = response;
+                }, "/Settings/Updater.json");
+
+            }, "/Settings/SystemHostSettings.json");
         }
     })
 
     WinJS.Namespace.define("Octopus.Core", {
+        InitializePrimarySocket: function () {
+            var url = "";
+            if (globalSettings.IsTestUser) {
+                for (var key in userSettings.TestUser.StardustHUB) {
+                    if (userSettings.TestUser.StardustHUB[key].isPrimary === true) {
+                        url = 'http://' + userSettings.TestUser.StardustHUB[key].Host + ':' + userSettings.TestUser.StardustHUB[key].Port + '/';
+                    }
+                }
+            }
+            else {
+                for (var key in userSettings.User.StardustHUB) {
+                    if (userSettings.User.StardustHUB[key].isPrimary === true) {
+                        url = 'http://' + userSettings.User.StardustHUB[key].Host + ':' + userSettings.User.StardustHUB[key].Port + '/';
+                    }
+                }
+            }
+            
+            socket = io(url);
+            Octopus.Core.Socket();
+        },
         Socket: function () {
-            socket = io(this.stardust);
-
+            
             socket.on('connect', function () {
                 WinJS.Application.queueEvent("StarDust.Connected");
             });

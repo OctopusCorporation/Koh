@@ -4,13 +4,19 @@
         "UserName": "Cami Rodriguez",
         "Password": "CAMILO",
         "StoreAvailable": true,
-        "CreditStatusAvalaible": true
+        "CreditStatusAvalaible": true,
+        "StardustHUB": [
+            { "_Id": "01", "Host": "104.46.97.27", "Port": "3000", "isPrimary": true }
+        ]
     },
     "User": {
         "_Id": null,
         "UserName": null,
         "Password": null,
         "StoreAvailable": false,
-        "CreditStatusAvalaible": false
+        "CreditStatusAvalaible": false,
+        "StardustHUB": [
+            
+        ]
     }
 }
