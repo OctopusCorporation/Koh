@@ -21,7 +21,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Settings\GlobalSettings.json" />
     <Content Include="$(MSBuildThisFileDirectory)Settings\HostList.json" />
     <Content Include="$(MSBuildThisFileDirectory)Settings\InitialSettings.json" />
-    <Content Include="$(MSBuildThisFileDirectory)Settings\libraries.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Settings\Libraries.json" />
     <Content Include="$(MSBuildThisFileDirectory)Settings\Updater.json" />
     <Content Include="$(MSBuildThisFileDirectory)Settings\UserSettings.json" />
     <Content Include="$(MSBuildThisFileDirectory)Theme\404.html" />

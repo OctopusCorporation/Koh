@@ -1,6 +1,4 @@
-﻿// For details on localizing a Windows app, see: http://go.microsoft.com/fwlink/?LinkId=212836
-
-{
+﻿{
     "StardustHUB": [
         { "_Id": "01", "Ip": "104.46.97.27", "port": "3000" }
     ],

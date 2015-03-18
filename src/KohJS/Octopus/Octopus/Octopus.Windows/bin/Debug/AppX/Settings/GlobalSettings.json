@@ -1,6 +1,4 @@
-﻿// For details on localizing a Windows app, see: http://go.microsoft.com/fwlink/?LinkId=212836
-
-{
+﻿{
     "IsTestUser": true,
     "ObligatoryLogin": true,
     "Themes": [ { "Name": "Red" } ],

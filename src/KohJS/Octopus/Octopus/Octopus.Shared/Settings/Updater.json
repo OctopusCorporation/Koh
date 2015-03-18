@@ -1,6 +1,4 @@
-﻿// For details on localizing a Windows app, see: http://go.microsoft.com/fwlink/?LinkId=212836
-
-{
+﻿{
     "KohPackages": { "Flag": "KohPackagesRev", "Revision": "0.0.0.1" },
     "KohComponents": { "Flag": "KohComponentsRev", "Revision": "0.0.0.1" },
     "KohTemplate": { "Flag": "KohTemplateRev", "Revision": "0.0.0.1"}
