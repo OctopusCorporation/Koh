@@ -12,8 +12,11 @@
     <Content Include="$(MSBuildThisFileDirectory)Core\Components\Examples\Message-Received.html" />
     <Content Include="$(MSBuildThisFileDirectory)Core\Components\Examples\Temperature-Viewer.html" />
     <Content Include="$(MSBuildThisFileDirectory)Core\Components\header.html" />
+    <Content Include="$(MSBuildThisFileDirectory)Core\css\toastr.css" />
+    <Content Include="$(MSBuildThisFileDirectory)Core\libs\jquery-2.1.3.min.js" />
     <Content Include="$(MSBuildThisFileDirectory)Core\libs\octopusEngine.js" />
     <Content Include="$(MSBuildThisFileDirectory)Core\libs\socket.io.js" />
+    <Content Include="$(MSBuildThisFileDirectory)Core\libs\toastr.js" />
     <Content Include="$(MSBuildThisFileDirectory)Core\libs\WebComponents.js" />
     <Content Include="$(MSBuildThisFileDirectory)Examples\default.html" />
     <Content Include="$(MSBuildThisFileDirectory)img\logo.png" />

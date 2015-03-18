@@ -20,13 +20,13 @@
     <AppXManifest Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-03-18T07:08:41.953</Modified>
+      <Modified>2015-03-18T16:33:37.958</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\default.html">
       <PackagePath>default.html</PackagePath>
-      <Modified>2015-03-18T07:24:58.847</Modified>
+      <Modified>2015-03-18T16:35:25.831</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Core\Components\asideMenu.html">
       <PackagePath>Core\Components\asideMenu.html</PackagePath>
@@ -284,6 +284,10 @@
       <PackagePath>css\default.css</PackagePath>
       <Modified>2015-02-14T20:40:46.024</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Core\css\toastr.css">
+      <PackagePath>Core\css\toastr.css</PackagePath>
+      <Modified>2015-03-18T16:14:48.499</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Theme\css\app.v1.css">
       <PackagePath>Theme\css\app.v1.css</PackagePath>
       <Modified>2015-02-27T23:24:29.381</Modified>
@@ -308,13 +312,21 @@
       <PackagePath>Theme\js\jvectormap\jquery-jvectormap-1.2.2.css</PackagePath>
       <Modified>2015-02-15T04:03:34.923</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Core\libs\jquery-2.1.3.min.js">
+      <PackagePath>Core\libs\jquery-2.1.3.min.js</PackagePath>
+      <Modified>2015-03-18T16:33:10.121</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Core\libs\octopusEngine.js">
       <PackagePath>Core\libs\octopusEngine.js</PackagePath>
-      <Modified>2015-03-18T07:30:15.117</Modified>
+      <Modified>2015-03-18T16:34:00.330</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Core\libs\socket.io.js">
       <PackagePath>Core\libs\socket.io.js</PackagePath>
       <Modified>2015-02-14T20:40:45.750</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Core\libs\toastr.js">
+      <PackagePath>Core\libs\toastr.js</PackagePath>
+      <Modified>2015-03-18T16:14:48.531</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Core\libs\WebComponents.js">
       <PackagePath>Core\libs\WebComponents.js</PackagePath>
@@ -566,7 +578,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-03-18T07:08:41.754</Modified>
+      <Modified>2015-03-18T16:33:37.770</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

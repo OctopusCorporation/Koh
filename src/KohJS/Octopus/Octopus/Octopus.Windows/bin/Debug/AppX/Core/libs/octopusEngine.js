@@ -86,6 +86,7 @@
         Socket: function () {
             
             socket.on('connect', function () {
+                Octopus.MessageBox.Show("Primary stardust HUB", "Is connected successfully", "success")
                 WinJS.Application.queueEvent("StarDust.Connected");
             });
 
@@ -169,6 +170,15 @@
                 xhr.open("GET", fileName, false);
                 xhr.send();
             }
+        }
+    })
+
+    WinJS.Namespace.define("Octopus.MessageBox", {
+        Show: function (title, message, type) {
+            if (toastr) {
+                toastr[type](message, title)
+            }
+            
         }
     })
 
