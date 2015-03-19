@@ -1,6 +1,7 @@
 ﻿{
     "Core": [
         { "Path": "Core/libs/WebComponents.js" },
-        { "Path": "Core/libs/socket.io.js" }
+        { "Path": "Core/libs/socket.io.js" },
+        { "Path": "Core/libs/overrides.js" }
     ]
 }

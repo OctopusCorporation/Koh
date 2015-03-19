@@ -1,0 +1,21 @@
+{
+  "_Id":"01",
+  "ProjectName": "Temperature_App",
+  "Version": "0.0.0.1",
+  "Description": "This app show how to control a the temperature",
+  "PlatformType":"Arduino",
+  "Application":{
+    "StartPage": "index.html",
+    "WideInformation":{
+        "Name":"Temperature control"
+      },    
+      "VisualElements":{
+        "Logo": "img/logo.png",
+        "WideLogo": "img/wide.png"
+      },
+      "Files":[
+        {"Path": "js/app.js"},
+        {"Path": "css/app.css"}
+      ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "_Id":"01",
+  "ProjectName": "Led_App",
+  "Version": "0.0.0.1",
+  "Description": "This app show how to control a led",
+  "PlatformType":"Arduino",
+  "Application":{
+    "StartPage": "index.html",
+    "WideInformation":{
+        "Name":"Led"
+      },    
+      "VisualElements":{
+        "Logo": "img/logo.png",
+        "WideLogo": "img/wide.png"
+      },
+      "Files":[
+        {"Path": "js/app.js"},
+        {"Path": "css/app.css"}
+      ]
+  }
+}
