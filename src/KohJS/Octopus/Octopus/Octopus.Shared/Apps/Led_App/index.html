@@ -1,1 +1,87 @@
-<h1>Led app</h1>
+<style>
+.win-label{
+	font-size: 14px;
+}
+
+.win-title{
+	font-size: 18px;
+}
+
+.win-switch{
+	
+}
+.win-toggleswitch{
+	height: 50px;
+}
+.container{
+	height: 500px !important;
+}
+input[type=range]::-ms-track {
+	position: relative;
+	width: 60px;
+	height: 40px;
+	border-radius: 30px;
+	background-color: transparent;
+	display: inline-block;
+	border: 1px solid transparent;
+    
+    /*remove default tick marks*/
+    color: transparent;
+}
+
+input[type=range]::-ms-thumb {
+    border: none;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #ddd;
+  	border: 1px solid #eee;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #c33c34;
+    height: 20px;
+    border-radius: 20px;
+}
+input[type=range]::-ms-fill-upper {
+    background: transparent;
+}
+input[type=range]:focus::-ms-fill-lower {
+    background: #c33c34;
+    height: 20px;
+    border-radius: 20px;
+}
+input[type=range]:focus::-ms-fill-upper {
+    background: transparent
+}
+</style>
+
+<h1> <a href="#" onclick="javascript: Octopus.NavigateTo('apps')"><i class="i i-arrow-left2"></i> Led app</a></h1>
+
+<section class="col-lg-12 container">
+	<div id="toggleSwitch"></div>
+</section>
+
+
+<script>
+	function ledChanged() {
+        var toggleSwitch = document.getElementById('toggleSwitch').winControl;
+        if (toggleSwitch != undefined) {
+            if (toggleSwitch.checked == true) {
+                Octopus.emit('command.LedChanged', [{ isOn: true }]);
+            }
+            else {
+                Octopus.emit('command.LedChanged', [{ isOn: false }]);
+            }
+        }
+
+    }
+
+    (function () {
+        "use strict";
+
+        var element = document.getElementById("toggleSwitch");
+        var toggle = new WinJS.UI.ToggleSwitch(element, { title: "Led", checked: true, onchange: ledChanged });
+
+    })();
+</script>

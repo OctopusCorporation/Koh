@@ -1,4 +1,5 @@
 ﻿(function () {
+    // http://stackoverflow.com/questions/3387427/remove-element-by-id#answer-18120786
     Element.prototype.remove = function () {
         this.parentElement.removeChild(this);
     }

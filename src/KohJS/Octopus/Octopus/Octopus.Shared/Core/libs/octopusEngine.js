@@ -18,7 +18,6 @@
     WinJS.Namespace.define("Octopus.Core", {
         Initialize: function () {
             Octopus.Core.SettingUpApp();
-            //
         }
     })
 
@@ -174,6 +173,12 @@
         }
     })
 
+    WinJS.Namespace.define("Octopus.Utils", {
+        CleanContent: function () {
+            document.querySelector("#mainContent_>shadow-root").remove();
+        }
+    })
+
     WinJS.Namespace.define("Octopus.MessageBox", {
         Show: function (title, message, type) {
             if (toastr) {
@@ -203,6 +208,7 @@
 
     WinJS.Namespace.define("Octopus.Core", {
         GetAllApps: function (target) {
+
             if (userSettings != null) {
                 if (target != undefined) {
                     if (globalSettings.IsTestUser) {
@@ -220,7 +226,7 @@
                                                 '</div> ' + item.DisplayName +
                                             '</header>' +
 
-                                            '<div class="panel-body" onclick="javascript: Octopus.Core.LoadApp(\'Apps/' + item.ProjectName+ '/' + appInfo.Application.StartPage + '\')" style="cursor:pointer; height:213px;background: url(Apps/' + item.ProjectName + '/' + appInfo.Application.VisualElements.WideLogo + ') no-repeat;">' +
+                                            '<div class="panel-body" onclick="javascript: Octopus.Core.LoadComponent(\'Apps/' + item.ProjectName+ '/' + appInfo.Application.StartPage + '\')" style="cursor:pointer; height:213px;background: url(Apps/' + item.ProjectName + '/' + appInfo.Application.VisualElements.WideLogo + ') no-repeat;">' +
                                                 '<div class="clearfix text-center m-t">' + appInfo.Description + '</div>' +
                                             '</div>' +
                                         '</section>' +
@@ -264,8 +270,8 @@
     })
 
     WinJS.Namespace.define("Octopus.Core", {
-        LoadApp: function (component) {
-            document.querySelector("#mainContent_>shadow-root").remove();
+        LoadComponent: function (component) {
+            Octopus.Utils.CleanContent();
 
             var xhr = new XMLHttpRequest();
             url = component
@@ -299,6 +305,27 @@
                 }
             };
             xhr.send();
+        }
+    })
+
+    WinJS.Namespace.define("Octopus", {
+        NavigateTo: function (component) {
+            switch (component.toLowerCase()) {
+                case 'apps':
+                    Octopus.Core.LoadComponent('/Core/Components/apps.html');
+                    break;
+                default:
+                    break;
+            }
+            
+        }
+    })
+
+    WinJS.Namespace.define("Octopus", {
+        GetPath: function () {
+            if (globalSettings.IsTestUser) {
+                return '/Apps/' + userSettings;
+            }
         }
     })
 
