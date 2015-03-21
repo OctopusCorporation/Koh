@@ -238,7 +238,6 @@
 
     WinJS.Namespace.define("Octopus.Core", {
         GetAllApps: function (target) {
-
             if (userSettings != null) {
                 if (target != undefined) {
                     if (globalSettings.IsTestUser) {
@@ -246,6 +245,9 @@
                         for (var key in userSettings.TestUser.Apps) {
                             var item = userSettings.TestUser.Apps[key];
 
+                            //var localPath = Windows.Storage.ApplicationData.current.localFolder.path
+                            var localPath = "ms-appdata:///local/";
+                            var manifestLocation = localPath + "/Apps/" + item.ProjectName+ "/" + item.Manifest;
                             Octopus.Core.GetAppInformation(function (appInfo) {
                                 html +=
                                         '<div class="col-lg-4">' +
@@ -262,7 +264,7 @@
                                         '</section>' +
                                         '</div>';
 
-                            }, "/Apps/" + item.ProjectName+ "/" + item.Manifest);
+                            }, manifestLocation);
 
                             
                            

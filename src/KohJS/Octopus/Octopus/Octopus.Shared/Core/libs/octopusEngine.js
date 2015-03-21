@@ -238,7 +238,6 @@
 
     WinJS.Namespace.define("Octopus.Core", {
         GetAllApps: function (target) {
-
             if (userSettings != null) {
                 if (target != undefined) {
                     if (globalSettings.IsTestUser) {
@@ -252,17 +251,17 @@
                                         '<section class="panel panel-default">' +
                                             '<header class="panel-heading">' +
                                                 '<div class="nav nav-pills pull-right" style="margin-right:0px;padding-top:5px;"> ' +
-                                                        '<a href="#" style="font-size:14px;margin-right:5px;"><i class="i i-bars3 icon"></i></a><a href="#" onclick="javascipt: Octopus.Core.DeleteApp(\''+item.ProjectName+'\')" style="font-size: 16px;"><i class="fa fa-times"></i></a>' +
+                                                        '<a href="#" style="font-size:14px;margin-right:5px;"><i class="i i-bars3 icon"></i></a><a href="#" onclick="javascipt: Octopus.Core.DeleteApp(\'' + item.ProjectName + '\')" style="font-size: 16px;"><i class="fa fa-times"></i></a>' +
                                                 '</div> ' + item.DisplayName +
                                             '</header>' +
 
-                                            '<div class="panel-body" onclick="javascript: Octopus.Core.LoadComponent(\'Apps/' + item.ProjectName+ '/' + appInfo.Application.StartPage + '\')" style="cursor:pointer; height:213px;background: url(Apps/' + item.ProjectName + '/' + appInfo.Application.VisualElements.WideLogo + ') no-repeat;">' +
+                                            '<div class="panel-body" onclick="javascript: Octopus.Core.LoadComponent(\'Apps/' + item.ProjectName + '/' + appInfo.Application.StartPage + '\')" style="cursor:pointer; height:213px;background: url(Apps/' + item.ProjectName + '/' + appInfo.Application.VisualElements.WideLogo + ') no-repeat;">' +
                                                 '<div class="clearfix text-center m-t">' + appInfo.Description + '</div>' +
                                             '</div>' +
                                         '</section>' +
                                         '</div>';
 
-                            }, "/Apps/" + item.ProjectName+ "/" + item.Manifest);
+                            }, "ms-appdata:///local/" + "/Apps/" + item.ProjectName + "/" + item.Manifest);
 
                             
                            
