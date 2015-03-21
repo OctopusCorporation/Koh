@@ -14,7 +14,7 @@
     <Resource Language="x-generate" />
   </Resources>
   <Applications>
-    <Application Id="App" StartPage="default.html">
+    <Application Id="App" StartPage="Default.html">
       <m2:VisualElements DisplayName="Octopus.Windows" Description="Octopus.Windows" ForegroundText="light" BackgroundColor="#ffffff" Square150x150Logo="images\Logo.png" Square30x30Logo="images\SmallLogo.png">
         <m2:SplashScreen Image="images\splashscreen.png" BackgroundColor="#ffffff" />
       </m2:VisualElements>

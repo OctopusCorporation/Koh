@@ -23,31 +23,41 @@
 
     WinJS.Namespace.define("Octopus.Core", {
         SettingUpApp: function () {
+            var installFolder = Windows.ApplicationModel.Package.current.installedLocation;
+            var applicationData = Windows.Storage.ApplicationData.current;
+            var localFolder = applicationData.localFolder;
             
 
-            // Add the necesary libraries 
-            Octopus.Utils.ReadConfigFile(function (libraries) {
-                Octopus.Core.Require(libraries);
+            var updaterRoute = "Updater.json";
+            var systemHostSettingsRoute = "SystemHostSettings.json";
 
-                // Verify is test user or real user
-                Octopus.Utils.ReadConfigFile(function (initial) {
-                    initialSettings = initial;
+            Octopus.Utils.ReadConfigFile(function (global) {
+                globalSettings = global;
 
-                    // Get the global settings
-                    Octopus.Utils.ReadConfigFile(function (global) {
-                        globalSettings = global;
+                // Add the necesary libraries 
+                Octopus.Utils.ReadConfigFile(function (libraries) {
+                    Octopus.Core.Require(libraries);
+
+                    // Verify is test user or real user
+                    Octopus.Utils.ReadConfigFile(function (initial) {
+                        initialSettings = initial;
 
                         // Get user information
                         Octopus.Utils.ReadConfigFile(function (user) {
                             userSettings = user;
 
+
                             Octopus.Core.InitializePrimarySocket();
 
-                        }, "/Settings/UserSettings.json");
-                    }, "/Settings/GlobalSettings.json");
-                }, "/Settings/InitialSettings.json");
+                        }, localFolder, "UserSettings.json");
+                        
+                    }, localFolder, "InitialSettings.json");
 
-            }, "/Settings/Libraries.json");
+                }, localFolder, "Libraries.json");
+
+            }, localFolder, "GlobalSettings.json");
+
+           
                         
             // Check the system host and verify system updates
             Octopus.Utils.ReadConfigFile(function (hosts) {
@@ -55,9 +65,9 @@
 
                 Octopus.Utils.ReadConfigFile(function (response) {
                     updater = response;
-                }, "/Settings/Updater.json");
+                }, updaterRoute );
 
-            }, "/Settings/SystemHostSettings.json");
+            },systemHostSettingsRoute );
         }
     })
 
@@ -159,16 +169,36 @@
     })
 
     WinJS.Namespace.define("Octopus.Utils", {
-        ReadConfigFile: function (callback, fileName) {
+        ReadConfigFile: function (callback, folder, fileName) {
             if (fileName != undefined) {
-                var xhr = new XMLHttpRequest();
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState == 4 && xhr.status == 200) {
-                        callback(JSON.parse(xhr.responseText));
-                    }
-                };
-                xhr.open("GET", fileName, false);
-                xhr.send();
+
+                folder.getFolderAsync("Settings").then(function (settingsFolder) {
+                    settingsFolder.getFileAsync(fileName).then(function (settingsFile) {
+                        Windows.Storage.FileIO.readTextAsync(settingsFile).then(function (text) {
+                            callback(JSON.parse(text));
+                        });
+                    });
+                    
+                }, function (e) {
+                    folder.createFolderAsync("Settings", Windows.Storage.CreationCollisionOption.OpenIfExists).done(function (localSettingsFolder) {
+
+                        Octopus.Utils.CopyFilesToFolder(function () {
+                            var installFolder = Windows.Storage.ApplicationData.current.localFolder;
+
+                            installFolder.getFolderAsync("Settings").then(function (settingsFolder) {
+                                settingsFolder.getFileAsync(fileName).then(function (settingsFile) {
+                                    Windows.Storage.FileIO.readTextAsync(settingsFile).then(function (text) {
+                                        callback(JSON.parse(text));
+                                    });
+                                });
+                                
+                            });
+                        }, "Settings", Windows.ApplicationModel.Package.current.installedLocation, localSettingsFolder);
+
+                    })
+                });
+                
+                
             }
         }
     })
@@ -222,7 +252,7 @@
                                         '<section class="panel panel-default">' +
                                             '<header class="panel-heading">' +
                                                 '<div class="nav nav-pills pull-right" style="margin-right:0px;padding-top:5px;"> ' +
-                                                        '<a href="#" style="font-size:14px;margin-right:5px;"><i class="i i-bars3 icon"></i></a><a href="#" style="font-size: 16px;"><i class="fa fa-times"></i></a>' +
+                                                        '<a href="#" style="font-size:14px;margin-right:5px;"><i class="i i-bars3 icon"></i></a><a href="#" onclick="javascipt: Octopus.Core.DeleteApp(\''+item.ProjectName+'\')" style="font-size: 16px;"><i class="fa fa-times"></i></a>' +
                                                 '</div> ' + item.DisplayName +
                                             '</header>' +
 
@@ -318,6 +348,72 @@
                     break;
             }
             
+        }
+    })
+
+    WinJS.Namespace.define("Octopus.Core", {
+        DeleteApp: function (app) {
+            // Delete Folder App
+            var localFolder = Windows.Storage.ApplicationData.current.localFolder;
+            localFolder.getFolderAsync('Apps\\' + app).then(function (folder) {
+                return folder.deleteAsync();
+            }).done(function () {
+
+                // Edit User settings
+                if (globalSettings.IsTestUser) {
+                    for (var key in userSettings.TestUser.Apps) {
+                        var item = userSettings.TestUser.Apps[key];
+
+                        if (item.ProjectName === app) {
+                            userSettings.TestUser.Apps.splice(key, 1);
+                        }
+                    }
+                }
+                else {
+                    for (var key in userSettings.User.Apps) {
+                        var item = userSettings.TestUser.Apps[key];
+
+                        if (item.ProjectName === app) {
+                            userSettings.TestUser.Apps.splice(key, 1);
+                        }
+                    }
+                }
+                localFolder.getFolderAsync('Settings').then(function (folder) {
+                    folder.getFileAsync('UserSettings.json').then(function (file) {
+                        var text = JSON.stringify(userSettings);
+                        Windows.Storage.FileIO.writeTextAsync(file, text).then(function () {
+                            Octopus.MessageBox.Show("App deleted", "", "info");
+                            Octopus.NavigateTo("apps");
+                        });
+                    })
+                });
+                
+            }, function (err) {
+                Octopus.MessageBox.Show("Ups", err, "error");
+            });
+        }
+    })
+
+    WinJS.Namespace.define("Octopus.Utils", {
+        CopyFilesToFolder: function (callback, folder, fromFolder, toFolder) {
+            if (folder == null)
+                return;
+
+            fromFolder.getFolderAsync("Settings").then(function (installedFolder) {
+                installedFolder.getFilesAsync().then(function (files) {
+                    if (files != null) {
+                        files.forEach(function (file) {
+                            console.log("copy file: " + file.displayName);
+                            file.copyAsync(toFolder).then(function (file) {
+                                // file ok
+                            }, function (e) {
+                                console.log(e);
+                            });
+                        });
+                        callback();
+                    }
+                });
+            })
         }
     })
 

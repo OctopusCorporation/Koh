@@ -6,7 +6,7 @@
         "StoreAvailable": true,
         "CreditStatusAvalaible": true,
         "StardustHUB": [
-            { "_Id": "01", "Host": "104.46.97.27", "Port": "3000", "isPrimary": true }
+            { "_Id": "01", "Host": "192.168.1.4", "Port": "3000", "isPrimary": true }
         ],
         "Apps": [
             { "_Id": "01", "ProjectName": "Led_App", "DisplayName": "Led App", "Manifest": "OctoPackage.manifest" },

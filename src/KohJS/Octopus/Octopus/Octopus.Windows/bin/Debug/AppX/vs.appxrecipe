@@ -8,7 +8,7 @@
     <PackageArchitecture>neutral</PackageArchitecture>
     <PackageIdentityName>545a19da-f747-413f-80ca-cfbe5f8220ee</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\bld\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>7A5B45CCE227A385A17D06F1788AA86C649897E8DB4CF580A06338DFD399CEB2</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>A3744270A0C26C2F9DD9401869766E388137655718ADF339124B0011AC25F826</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>545a19da-f747-413f-80ca-cfbe5f8220ee_1.0.0.0_neutral__4383yd80yb47t</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>545a19da-f747-413f-80ca-cfbe5f8220ee_4383yd80yb47t!App</RegisteredUserModeAppID>
     <RegisteredPackageID>545a19da-f747-413f-80ca-cfbe5f8220ee</RegisteredPackageID>
@@ -20,7 +20,7 @@
     <AppXManifest Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\bin\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-03-19T05:53:37.656</Modified>
+      <Modified>2015-03-21T03:39:01.258</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
@@ -326,7 +326,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Core\libs\octopusEngine.js">
       <PackagePath>Core\libs\octopusEngine.js</PackagePath>
-      <Modified>2015-03-19T08:27:56.280</Modified>
+      <Modified>2015-03-21T22:43:49.185</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Core\libs\overrides.js">
       <PackagePath>Core\libs\overrides.js</PackagePath>
@@ -506,7 +506,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Settings\UserSettings.json">
       <PackagePath>Settings\UserSettings.json</PackagePath>
-      <Modified>2015-03-19T04:14:34.184</Modified>
+      <Modified>2015-03-20T18:00:08.438</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Theme\fonts\fontawesome-webfont.eot">
       <PackagePath>Theme\fonts\fontawesome-webfont.eot</PackagePath>
@@ -590,7 +590,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\bin\Debug\ReverseMap\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-03-19T05:53:37.297</Modified>
+      <Modified>2015-03-21T03:39:00.953</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
