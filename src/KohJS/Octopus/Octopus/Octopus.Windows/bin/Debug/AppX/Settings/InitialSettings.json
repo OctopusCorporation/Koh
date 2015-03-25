@@ -1,6 +1,6 @@
 ﻿{
-    "isFirstTime": false,
-    "showTutorial": false,
+    "isFirstTime": true,
+    "showTutorial": true,
     "downloadExampleAssets": false,
     "loginObligatory": false
 }

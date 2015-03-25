@@ -1,0 +1,28 @@
+﻿{
+    "TestUser": {
+        "_Id": "0",
+        "UserName": "Cami Rodriguez",
+        "Password": "CAMILO",
+        "StoreAvailable": true,
+        "CreditStatusAvalaible": true,
+        "StardustHUB": [
+            { "_Id": "01", "Host": "192.168.1.4", "Port": "3000", "isPrimary": true }
+        ],
+        "Apps": [
+            
+        ]
+    },
+    "User": {
+        "_Id": null,
+        "UserName": null,
+        "Password": null,
+        "StoreAvailable": false,
+        "CreditStatusAvalaible": false,
+        "StardustHUB": [
+
+        ],
+        "Apps": [
+
+        ]
+    }
+}

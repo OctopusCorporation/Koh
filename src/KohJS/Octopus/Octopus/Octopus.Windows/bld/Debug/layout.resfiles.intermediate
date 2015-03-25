@@ -6,6 +6,11 @@ Core\Components\Examples\Led-Control.html
 Core\Components\Examples\Message-Received.html
 Core\Components\Examples\Temperature-Viewer.html
 Core\Components\header.html
+Core\Components\home.html
+Core\Components\settings.html
+Core\Components\signin.html
+Core\Components\signup.html
+Core\Components\store.html
 Core\css\toastr.css
 Core\libs\jquery-2.1.3.min.js
 Core\libs\octopusEngine.js
@@ -16,12 +21,12 @@ Core\libs\WebComponents.js
 Examples\default.html
 img\logo.png
 js\default.js
+Settings\_UserSettings.json
 Settings\GlobalSettings.json
 Settings\InitialSettings.json
 Settings\Libraries.json
 Settings\SystemHostSettings.json
 Settings\Updater.json
-Settings\UserSettings.json
 Theme\404.html
 Theme\ajax.pie.html
 Theme\buttons.html

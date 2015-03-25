@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="545a19da-f747-413f-80ca-cfbe5f8220ee" Version="1.0.0.0" Publisher="CN=carodriguez" />
+  <Identity Name="53797CamiRodriguez.Octopus" Version="1.1.0.0" Publisher="CN=31E56C50-03A8-416C-8A72-A62713542F86" />
   <Properties>
-    <DisplayName>Octopus.Windows</DisplayName>
-    <PublisherDisplayName>carodriguez</PublisherDisplayName>
+    <DisplayName>Octopus</DisplayName>
+    <PublisherDisplayName>Cami Rodriguez</PublisherDisplayName>
     <Logo>images\storelogo.png</Logo>
   </Properties>
   <Prerequisites>
@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" StartPage="Default.html">
-      <m2:VisualElements DisplayName="Octopus.Windows" Description="Octopus.Windows" ForegroundText="light" BackgroundColor="#ffffff" Square150x150Logo="images\Logo.png" Square30x30Logo="images\SmallLogo.png">
+      <m2:VisualElements DisplayName="Octopus" Description="Octopus is a platform to unify and simplify the development of systems oriented to Internet of Things with HTML5 technologies for any Arduino and Netduino devices." ForegroundText="light" BackgroundColor="#ffffff" Square150x150Logo="images\Logo.png" Square30x30Logo="images\SmallLogo.png">
         <m2:SplashScreen Image="images\splashscreen.png" BackgroundColor="#ffffff" />
       </m2:VisualElements>
     </Application>

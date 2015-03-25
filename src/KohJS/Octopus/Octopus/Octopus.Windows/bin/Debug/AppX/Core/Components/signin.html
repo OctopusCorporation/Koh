@@ -1,0 +1,59 @@
+﻿<section id="content" class="m-t-lg wrapper-md animated fadeInUp">
+    <div class="container aside-xl">
+        <a class="navbar-brand block" href="index.html">OCTOPUS</a>
+        <section class="m-b-lg">
+            <header class="wrapper text-center"> <strong>Sign in to get in touch</strong> </header>
+            <form>
+                <div class="list-group">
+                    <div class="list-group-item">
+                        <input type="email" id="Email" name="Email" placeholder="Email" class="form-control no-border">
+                    </div>
+                    <div class="list-group-item">
+                        <input type="password" id="Password" name="Password" placeholder="Password" class="form-control no-border">
+                    </div>
+                </div>
+                <button id="signInButton" onclick="javascript: login()" class="btn btn-lg btn-primary btn-block">Sign in</button>
+                <!--<div class="text-center m-t m-b"><a href="#"><small>Forgot password?</small></a></div>-->
+                <div class="line line-dashed"></div>
+                <p class="text-muted text-center"><small>Do not have an account?</small></p> <a href="#" onclick="javascript: Octopus.Core.GetComponent('/Core/Components/signup.html', '#mainContainer_')" class="btn btn-lg btn-default btn-block">Create an account</a>
+            </form>
+        </section>
+    </div>
+</section>
+<!-- footer -->
+<footer id="footer">
+    <div class="text-center padder">
+        <p> <small>All rights are reserved to Camilo Rodríguez<br>&copy; 2014-2015</small> </p>
+    </div>
+</footer>
+
+<script>
+    function login() {
+        document.querySelector("#signInButton").innerHTML = "Loading..."
+
+        var params = $("#appInfo").serialize();
+
+        //$("#Name").attr("disabled", true);
+        $("#Email").attr("disabled", true);
+        $("#Password").attr("disabled", true);
+        $("#signUpButton").attr("disabled", true);
+
+        var xmlhttp = new XMLHttpRequest();
+        var url = 'http://octousers.azurewebsites.net/api/User?email=' + $("#Email").val();
+
+        xmlhttp.onreadystatechange = function () {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                var user = JSON.parse(xmlhttp.responseText);
+            }
+
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 400) {
+                // Log
+            }
+        }
+
+        xmlhttp.open("GET", url, true);
+
+        xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+        xmlhttp.send(params);
+    }
+</script>

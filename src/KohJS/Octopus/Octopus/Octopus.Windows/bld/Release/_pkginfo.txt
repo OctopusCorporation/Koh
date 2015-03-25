@@ -1,0 +1,1 @@
+C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\AppPackages\Octopus.Windows_1.1.0.0_AnyCPU_Test\Octopus.Windows_1.1.0.0_AnyCPU.appx

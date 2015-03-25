@@ -1,0 +1,35 @@
+﻿<section class="vbox" style="height:100%;">
+    <header id="mainHeader_" class="bg-white header header-md navbar navbar-fixed-top-xs box-shadow"></header>
+    <section>
+        <section class="hbox stretch">
+            <!-- .aside -->
+            <aside class="bg-black aside-md hidden-print hidden-xs" id="nav">
+                <section class="vbox" id="mainMenu_"></section>
+            </aside>
+
+            <section id="content">
+                <section class="hbox stretch">
+                    <section>
+                        <section class="vbox">
+                            <section class="scrollable padder" id="mainContent_">
+
+                                <!--PUT ALL CONTENT HERE-->
+
+                            </section>
+                        </section>
+                    </section>
+                </section>
+                <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
+            </section>
+            <!-- /.aside -->
+        </section>
+    </section>
+</section>
+
+<script>
+    (function () {
+        Octopus.Core.GetComponent("/Core/Components/header.html", "#mainHeader_")
+        Octopus.Core.GetComponent("/Core/Components/asideMenu.html", "#mainMenu_")
+        Octopus.Core.GetComponent("/Core/Components/apps.html", "#mainContent_")
+    })();
+</script>

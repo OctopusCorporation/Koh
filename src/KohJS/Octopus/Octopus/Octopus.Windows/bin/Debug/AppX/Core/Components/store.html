@@ -1,0 +1,26 @@
+﻿
+<div class="col-lg-12">
+    <div class="wrapper">
+        <form class="input-s-lg m-t m-l-n-xs hidden-xs" role="search">
+            <div class="form-group">
+                <div class="input-group"> <span class="input-group-btn"> <button type="submit" class="btn btn-sm bg-white b-white btn-icon"><i class="fa fa-search"></i></button> </span> <input type="text" class="form-control input-sm no-border" placeholder="Search apps, projects..."> </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<section id="appsContainer" class="scrollable wrapper">
+    <section style="text-align:center;">
+        <h1><i class="i i-spin spin"></i> Loading</h1>
+    </section>
+    
+    <!-- All apps is in here-->
+
+</section>
+
+<script>
+    (function () {
+        Octopus.Apps.Store.GetAllApps('#appsContainer');
+    })();
+</script>

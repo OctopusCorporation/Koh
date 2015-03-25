@@ -11,6 +11,8 @@ Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "Octopus.Windows", "Octopus\
 EndProject
 Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "Octopus.WindowsPhone", "Octopus\Octopus.WindowsPhone\Octopus.WindowsPhone.jsproj", "{53408C25-92B5-4AC5-92F0-2EE8D613755A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CompressRT", "CompressRT\CompressRT.csproj", "{DE10C173-B6B2-4437-9163-72EA3FC32986}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Octopus\Octopus.Shared\Octopus.Shared.projitems*{53408c25-92b5-4ac5-92f0-2ee8d613755a}*SharedItemsImports = 5
@@ -76,6 +78,22 @@ Global
 		{53408C25-92B5-4AC5-92F0-2EE8D613755A}.Release|x86.ActiveCfg = Release|x86
 		{53408C25-92B5-4AC5-92F0-2EE8D613755A}.Release|x86.Build.0 = Release|x86
 		{53408C25-92B5-4AC5-92F0-2EE8D613755A}.Release|x86.Deploy.0 = Release|x86
+		{DE10C173-B6B2-4437-9163-72EA3FC32986}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE10C173-B6B2-4437-9163-72EA3FC32986}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE10C173-B6B2-4437-9163-72EA3FC32986}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{DE10C173-B6B2-4437-9163-72EA3FC32986}.Debug|ARM.Build.0 = Debug|Any CPU
+		{DE10C173-B6B2-4437-9163-72EA3FC32986}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{DE10C173-B6B2-4437-9163-72EA3FC32986}.Debug|x64.Build.0 = Debug|Any CPU
+		{DE10C173-B6B2-4437-9163-72EA3FC32986}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{DE10C173-B6B2-4437-9163-72EA3FC32986}.Debug|x86.Build.0 = Debug|Any CPU
+		{DE10C173-B6B2-4437-9163-72EA3FC32986}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE10C173-B6B2-4437-9163-72EA3FC32986}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE10C173-B6B2-4437-9163-72EA3FC32986}.Release|ARM.ActiveCfg = Release|Any CPU
+		{DE10C173-B6B2-4437-9163-72EA3FC32986}.Release|ARM.Build.0 = Release|Any CPU
+		{DE10C173-B6B2-4437-9163-72EA3FC32986}.Release|x64.ActiveCfg = Release|Any CPU
+		{DE10C173-B6B2-4437-9163-72EA3FC32986}.Release|x64.Build.0 = Release|Any CPU
+		{DE10C173-B6B2-4437-9163-72EA3FC32986}.Release|x86.ActiveCfg = Release|Any CPU
+		{DE10C173-B6B2-4437-9163-72EA3FC32986}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

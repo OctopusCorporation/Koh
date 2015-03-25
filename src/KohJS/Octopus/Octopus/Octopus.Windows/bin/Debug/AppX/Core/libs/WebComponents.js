@@ -1,4 +1,5 @@
 ﻿(function () {
+    console.log('Web Components Polyfill is loaded.');
     var elements = document.querySelectorAll('link[rel=import]');
     var shadowDom = null;
 
@@ -10,7 +11,8 @@
         for (i = 0; i < elements.length; i++) {
             (function (i) {
                 xhr[i] = new XMLHttpRequest();
-                url = elements[i].href;;
+                url = elements[i].href;
+                console.log(url);
                 xhr[i].open("GET", url, true);
                 xhr[i].onreadystatechange = function () {
                     if (xhr[i].readyState == 4 && xhr[i].status == 200) {

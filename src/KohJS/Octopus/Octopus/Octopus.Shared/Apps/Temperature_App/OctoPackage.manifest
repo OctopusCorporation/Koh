@@ -2,6 +2,7 @@
   "_Id":"01",
   "ProjectName": "Temperature_App",
   "Version": "0.0.0.1",
+  "MinimumOctoApp": "0.0.0.2",
   "Description": "This app show how to control a the temperature",
   "PlatformType":"Arduino",
   "Application":{

@@ -21,49 +21,53 @@
 
     <!-- Octopus references -->
     <script src="Core/libs/octopusEngine.js"></script>
+    <script src="Core/libs/WebComponents.js"></script>
     <script src="Core/libs/socket.io.js"></script>
     <script src="Core/libs/jquery-2.1.3.min.js"></script>
     <script src="Core/libs/toastr.js"></script>
-
     <!-- Octopus.Windows references -->
     <link href="/css/default.css" rel="stylesheet" />
     <script src="/js/default.js"></script>
 
     <!-- HTML Imports-->
-    <link rel="import" href="/Core/Components/header.html" data-target="#mainHeader_">
+    <!--<link rel="import" href="/Core/Components/header.html" data-target="#mainHeader_">
     <link rel="import" href="/Core/Components/asideMenu.html" data-target="#mainMenu_">
-    <link rel="import" href="/Core/Components/apps.html" data-target="#mainContent_">
+    <link rel="import" href="/Core/Components/apps.html" data-target="#mainContent_">-->
+    <style>
+        .spin {
+            -webkit-animation: spin 1s linear infinite;
+            -moz-animation: spin 1s linear infinite;
+            animation: spin 1s linear infinite;
+        }
+
+        @-moz-keyframes spin {
+            100% {
+                -moz-transform: rotate(360deg);
+            }
+        }
+
+        @-webkit-keyframes spin {
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
     
 </head>
 <body>
-    <section class="vbox">
-        <header id="mainHeader_" class="bg-white header header-md navbar navbar-fixed-top-xs box-shadow"></header>
-        <section>
-            <section class="hbox stretch">
-                <!-- .aside -->
-                <aside class="bg-black aside-md hidden-print hidden-xs" id="nav">
-                    <section class="vbox" id="mainMenu_"></section>
-                </aside>
-
-                <section id="content">
-                    <section class="hbox stretch">
-                        <section>
-                            <section class="vbox">
-                                <section class="scrollable padder" id="mainContent_">
-
-                                    <!--PUT ALL CONTENT HERE-->
-
-                                </section>
-                            </section>
-                        </section>
-                    </section>
-                    <a href="#" class="hide nav-off-screen-block" data-toggle="class:nav-off-screen,open" data-target="#nav,html"></a>
-                </section>
-                <!-- /.aside --> 
-            </section>
+    <section id="mainContainer_" style="height:100%; width:100%">
+        <section style="text-align:center;">
+            <h1><i class="i i-spin spin"></i> Loading</h1>
         </section>
     </section>
-
+    
     <script src="/Theme/js/app.v1.js"></script>
     <script src="/Theme/js/charts/easypiechart/jquery.easy-pie-chart.js"></script>
     <script src="/Theme/js/charts/sparkline/jquery.sparkline.min.js"></script>

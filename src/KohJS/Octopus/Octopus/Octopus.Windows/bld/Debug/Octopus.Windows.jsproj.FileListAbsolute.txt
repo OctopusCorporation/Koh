@@ -16,6 +16,10 @@ C:\Users\carodriguez\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\b
 C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\bin\Debug\ReverseMap\resources.pri
 C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\bin\Debug\AppxManifest.xml
 C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\bin\Debug\Octopus.Windows.build.appxrecipe
+C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\bin\Debug\CompressRT.winmd
+C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\bin\Debug\CompressRT.pdb
+C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\bin\Debug\CompressRT.pri
+C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\bld\Debug\Octopus.Windows.jsprojResolveAssemblyReference.cache
 C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\bld\Debug\priconfig.xml
 C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\bld\Debug\priconfig.xml.intermediate
 C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\bld\Debug\layout.resfiles

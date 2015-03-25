@@ -2,5 +2,6 @@
     "IsTestUser": true,
     "ObligatoryLogin": true,
     "Themes": [ { "Name": "Red" } ],
-    "Home": "projects"
+    "Home": "projects",
+    "OctoAppVersion": "0.0.0.1"
 }

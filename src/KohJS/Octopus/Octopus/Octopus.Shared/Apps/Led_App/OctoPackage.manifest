@@ -2,6 +2,7 @@
   "_Id":"01",
   "ProjectName": "Led_App",
   "Version": "0.0.0.1",
+  "MinimumOctoApp": "0.0.0.1",
   "Description": "This app show how to control a led",
   "PlatformType":"Arduino",
   "Application":{

@@ -16,6 +16,9 @@
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\CompressRT\bin\Debug\CompressRT.winmd">
+      <PackagePath>CompressRT.winmd</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Windows\default.html">
       <PackagePath>default.html</PackagePath>
     </AppxPackagedFile>
@@ -39,6 +42,21 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Core\Components\header.html">
       <PackagePath>Core\Components\header.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Core\Components\home.html">
+      <PackagePath>Core\Components\home.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Core\Components\settings.html">
+      <PackagePath>Core\Components\settings.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Core\Components\signin.html">
+      <PackagePath>Core\Components\signin.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Core\Components\signup.html">
+      <PackagePath>Core\Components\signup.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Core\Components\store.html">
+      <PackagePath>Core\Components\store.html</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Examples\default.html">
       <PackagePath>Examples\default.html</PackagePath>
@@ -377,8 +395,8 @@
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Settings\Updater.json">
       <PackagePath>Settings\Updater.json</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Settings\UserSettings.json">
-      <PackagePath>Settings\UserSettings.json</PackagePath>
+    <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Settings\_UserSettings.json">
+      <PackagePath>Settings\_UserSettings.json</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Camilo\Octopus Git\Koh\src\KohJS\Octopus\Octopus\Octopus.Shared\Theme\fonts\fontawesome-webfont.eot">
       <PackagePath>Theme\fonts\fontawesome-webfont.eot</PackagePath>

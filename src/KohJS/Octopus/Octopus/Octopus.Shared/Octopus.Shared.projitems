@@ -14,6 +14,11 @@
     <Content Include="$(MSBuildThisFileDirectory)Core\Components\Examples\Message-Received.html" />
     <Content Include="$(MSBuildThisFileDirectory)Core\Components\Examples\Temperature-Viewer.html" />
     <Content Include="$(MSBuildThisFileDirectory)Core\Components\header.html" />
+    <Content Include="$(MSBuildThisFileDirectory)Core\Components\home.html" />
+    <Content Include="$(MSBuildThisFileDirectory)Core\Components\settings.html" />
+    <Content Include="$(MSBuildThisFileDirectory)Core\Components\signin.html" />
+    <Content Include="$(MSBuildThisFileDirectory)Core\Components\signup.html" />
+    <Content Include="$(MSBuildThisFileDirectory)Core\Components\store.html" />
     <Content Include="$(MSBuildThisFileDirectory)Core\css\toastr.css" />
     <Content Include="$(MSBuildThisFileDirectory)Core\libs\jquery-2.1.3.min.js" />
     <Content Include="$(MSBuildThisFileDirectory)Core\libs\octopusEngine.js" />
@@ -29,7 +34,7 @@
     <Content Include="$(MSBuildThisFileDirectory)Settings\InitialSettings.json" />
     <Content Include="$(MSBuildThisFileDirectory)Settings\Libraries.json" />
     <Content Include="$(MSBuildThisFileDirectory)Settings\Updater.json" />
-    <Content Include="$(MSBuildThisFileDirectory)Settings\UserSettings.json" />
+    <Content Include="$(MSBuildThisFileDirectory)Settings\_UserSettings.json" />
     <Content Include="$(MSBuildThisFileDirectory)Theme\404.html" />
     <Content Include="$(MSBuildThisFileDirectory)Theme\ajax.pie.html" />
     <Content Include="$(MSBuildThisFileDirectory)Theme\buttons.html" />
